@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="Paguina de Contacto" content="Contacto">
+    <title>Contacto</title>
+    <link rel="icon" type="image/gif" href="img/nfthero.png">
+    <link rel="stylesheet" type="text/css" href="trabajo7.css">
+  </head>
+
+  <body>
+    
+    <!-- Esta es la franja azul oscuro completa -->
+      <header id="header-principal">
+        
+        <!-- Contenedor para centrar el contenido (opcional, pero recomendado) -->
+        <div id="contenedor-flex">
+
+            <!-- 1. BLOQUE LOGO (Izquierda) -->
+            <div>
+                <a href="inicio.html"><img src="img/logo2.png"></a>
+            </div>
+
+            <!-- 2. BLOQUE MENÚ (Centro) -->
+            <nav id="menu-navegacion">
+                <ul>
+                    <li><a href="inicio.html">Inicio</a></li>
+                    <li><a href="vender.html">Vender NFT</a></li>
+                    <li><a href="tasar.html">Tasar NFT</a></li>
+                    <li><a href="escaparate.html">Comprar NFT</a></li>
+                    <li><a href="colecciones.html">Colecciones</a></li>
+                    <li id="pagina-actual"><a href="contacto.html">Contacto</a></li>
+                    <li><a href="iniciarsesion.html">👤 Iniciar Sesion</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+    
+    <main class="pagina-contacto">
+        <!-- Imagen de cabecera de la sección -->
+        <section id="hero-contacto">
+            <h1>Centro de Soporte al Inversor</h1>
+            <p>¿Tu NFT de un pato con corbata ya no vale nada? Cuéntanos tu drama.</p>
+            <div id="lobato-container">   
+            <img src="img/lobato.png" alt="antonio lobato" id="foto-lobato">
+            </div>
+        </section>
+
+        <section id="contenido-contacto">
+            <!-- COLUMNA IZQUIERDA: Formulario -->
+            <div id="formulario-container">
+                <h2>Envíanos tu "Ticket de Desesperación"</h2>
+                <form action="#">
+                    <label>Nombre Completo</label>
+                    <input type="text" placeholder="Tu nombre real (el de tu DNI, no el de Discord)">
+                    
+                    <label>Numero de Telefono</label>
+                    <input type="text" placeholder="Numero de Spam Telefonico">
+
+                    <Label>Genero</Label>
+                    <select>
+                        <option>Masculino</option>
+                        <option>Femenino</option>
+                        <option>Therian</option>
+                        <option>Me ofende la pregunta</option>
+                    </select>
+                    <label>Email de contacto</label>
+                    <input type="email" placeholder="ejemplo@criptoarruinado.com">
+                    
+                    <label>¿Cuál es tu problema?</label>
+                    <select>
+                        <option>Mi NFT ha bajado un 99.9%</option>
+                        <option>Le di las llaves de mi wallet a un desconocido</option>
+                        <option>Mi mujer me ha echado de casa</option>
+                        <option>Otro (especificar abajo)</option>
+                    </select>
+
+                    <label>Mensaje</label>
+                    <textarea rows="5" placeholder="Cuanto más llores, antes te ignoramos..."></textarea>
+
+                    <div id="contenedor-checkbox">
+                     <input type="checkbox" id="eula" name="eula" required>
+                    <label for="eula">
+                        Declaro haber leído y aceptar las condiciones generales del programa y la normativa sobre la protección de datos.
+                    </label>
+                    </div>
+
+                    <button type="submit" class="btn-comprar">ENVIAR QUEJA AL AGUJERO NEGRO</button>
+                </form>
+            </div>
+
+            <!-- COLUMNA DERECHA: Datos y Mapa -->
+            <div id="info-lateral">
+                <div id="datos-contacto">
+                    <h3>Nuestras Oficinas Centrales</h3>
+                    <p>📍 Calle de la Amargura, 404, Las Bahamas.</p>
+                    <p>📞 +34 900 000 000 (Llamada de pago)</p>
+                    <p>📧 soporte@nuncateresponderemos.com</p>
+                </div>
+
+                <div id="datos-contacto">
+                    <h3>Localízanos (Si puedes)</h3>
+                    <!-- Mapa de Google Maps (Placeholder) con iframe que basicamente me permite insertar sitios web externos dentro del mio -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3155.085262311869!2d-0.9687906235820342!3d37.74114391409567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd636c3e2826cd85%3A0x20f0e270c2cbe43e!2sIES%20Gerardo%20Molina!5e0!3m2!1ses!2ses!4v1777537905995!5m2!1ses!2ses" width="400" height="300"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+     <footer id="footer-estafa">
+    <div id="contenedor-footer">
+        <!-- Columna 1: Un poco de branding -->
+        <div id="footer-info">
+            <h4>CompramosTusNFTs.es</h4>
+            <p>Líderes en el mercado secundario de activos digitales de dudoso valor desde 2022.</p>
+        </div>
+
+        <!-- Columna 2: Redes Sociales -->
+        <div id="footer-redes">
+            <h4>Síguenos en nuestras redes "sociales"</h4>
+            <div id="iconos-redes">
+                <a href="https://x.com/" class="red-social"><img width="30" src="img/x.png" alt="twitter2">X (Twitter)</a>
+                <a href="https://www.instagram.com/" class="red-social"><img width="20" src="img/instagram.png" alt="instagram">Instagram</a>
+                <a href="https://www.tiktok.com/explore" class="red-social"><img width="20" src="img/tiktok.png" alt="tiktok">TikTok (Si)</a>
+                <a href="https://web.telegram.org" class="red-social"> <img width="20" src="img/telegram.png" alt="telegram"> Telegram</a>
+            </div>
+        </div>
+
+        <!-- Columna 3: Enlaces de relleno -->
+        <div id="footer-links">
+            <h4>Legales</h4>
+            <ul>
+                <li><a href="politica.html">Política de Humo</a></li>
+                <li><a href="politica.html">Términos de "No Devolución"</a></li>
+                <li><a href="politica.html">Cookies de Chocolate</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="footer-copyright">
+        <p>&copy; 2026 CompramosTusNFTs - Todos los derechos reservados (o lo que quede de ellos).</p>
+    </div>
+</footer>
+  </body>
+  
+  </html>

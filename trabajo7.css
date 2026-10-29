@@ -1,0 +1,777 @@
+/* --- ESTILOS GENERALES --- */
+* {
+    margin: 0;    /* por si las moscas un margin y padding 0 */
+    padding: 0;
+    box-sizing: border-box;
+    /* Usamos una fuente sans-serif limpia parecida a la original */
+    font-family: Arial, Helvetica, sans-serif;        /* importante no editar esta seccion debido a que la pagina entera depende de esta */
+}
+
+/* --- ESTILOS DEL HEADER (La franja azul) --- */
+#header-principal {
+    /* Color azul oscuro exacto de la imagen */
+    background-color: #104e7a; 
+    
+    padding: 10px 0; /* Espaciado arriba y abajo */
+    color: white;
+}
+
+/* Contenedor que usa Flexbox para alinear los 3 bloques principales */
+#contenedor-flex {
+    display: flex;
+    justify-content: space-between; /* Separa los bloques: izq, centro, der */
+    align-items: center; /* Centra los bloques verticalmente */
+    max-width: 1300px; /* Ancho máximo para que no se pegue a los bordes */
+    margin: 0 auto; /* Centra el contenedor en la pantalla */
+    padding: 0 20px; /* Margen interno a los lados */
+}
+
+/* --- 2. ESTILOS DEL MENÚ --- */
+#menu-navegacion ul {
+    list-style: none; /* Quita los puntos de la lista */
+    display: flex; /* Alinea los enlaces en horizontal */
+    gap: 20px; /* Espacio entre cada enlace */
+}
+
+#menu-navegacion a {
+    text-decoration: none; /* Quita el subrayado */
+    color: white;
+    font-size: 14px;
+}
+
+#menu-navegacion a:hover, #bloque-usuario a:hover {
+    color: #e87a24; /* Color naranja al pasar el ratón */
+    transition: color 0.3s; /* Efecto suave al pasar el ratón */
+}
+
+#pagina-actual {
+  outline: 4px solid #e87a24; 
+  background-color: rgba(54, 47, 47, 0.952);
+  border-radius: 4px;
+  padding: 2px;
+}
+
+/* --- SECCIÓN DE CONFIANZA / RELLENO --- */
+#seccion-confianza {
+    padding: 80px 20px;
+    color: white;
+    text-align: center;
+}
+
+#subtitulo {
+    font-size: 1.2rem;
+    margin-bottom: 50px;
+    opacity: 0.8;
+    color: #000000;
+}
+
+/* El grid para los 3 beneficios inexistentes*/
+#grid-beneficios {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto 60px auto;
+    flex-wrap: wrap;
+}
+
+.beneficio {
+    padding: 30px;
+    border-radius: 15px;
+    width: 300px;
+    border: 1px solid rgba(232, 122, 36, 0.2);
+    transition: 0.3s;
+    background: linear-gradient(180deg, #0d0d0f 0%, #104e7a 100%);
+}
+
+.beneficio:hover {
+    background: rgba(255, 94, 0, 0.74);
+}
+
+.beneficio .icono {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.beneficio h3 {
+    margin-bottom: 10px;
+    color: white;
+}
+
+/* Caja de llamada a la acción final */
+#llamada-accion {
+    background: linear-gradient(180deg, #ff9100 0%, #104e7a 100%);
+    color: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#llamada-accion h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+/* --- ESTILOS PÁGINA CONTACTO --- */
+#hero-contacto {
+    background-color: #0a2e48;
+    padding: 60px 20px;
+    text-align: center;
+    color: white;
+}
+
+#contenido-contacto {
+    display: flex; /* Dividimos en dos columnas */
+    max-width: 1200px;
+    margin: 40px auto;
+    gap: 40px;
+    padding: 20px;
+}
+
+#formulario-container {
+    flex: 2; /* El formulario es más ancho */
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    color: #333;
+}
+
+#formulario-container h2 {
+    margin-bottom: 20px;
+    color: #104e7a;
+}
+
+form label {        /* Edicion de los formularios de la pagina de contacto */
+    display: block;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+form input, form select, form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+}
+
+/* Columna de información y mapa */
+#info-lateral {
+    flex: 1; /* Columna más estrecha */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#datos-contacto {
+    background: #104e7a;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+}
+
+#datos-contacto h3 {
+    margin-bottom: 15px;
+    color: #e87a24;
+}
+
+#lobato-container {     /* cambiamos position absolute por float que tiene magia y gracia para poner a lobato aqui */
+    float: right;
+    margin-right: 240px;
+    margin-top: -100px;
+    width: 250px;
+}
+
+#foto-lobato {
+    width: 100%;
+    border-radius: 50%; /* Lo hace redondo */
+    border: 4px solid #e87a24; /* Le pone el naranja de  logo */
+    box-shadow: 0 0 20px rgba(232, 122, 36, 0.5); /* Brillo neón */
+}
+
+/* --- FOOTER FINAL --- */
+#footer-estafa {
+    background-color: #0d0d0f; /* Negro muy oscuro */
+    color: white;
+    padding: 60px;
+}
+
+#contenedor-footer {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+#footer-info, .footer-redes, .footer-links {
+    flex: 1;
+    min-width: 250px;
+}
+
+#footer-estafa h4 {
+    color: #e87a24; /* Tu naranja corporativo */
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+#footer-info p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+/* Estilo de los enlaces del footer */
+#footer-links ul {
+    list-style: none;
+}
+
+#footer-links li {
+    margin-bottom: 10px;
+}
+
+#footer-links a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+#footer-links a:hover {
+    color: white;
+}
+
+/* Botones de Redes Sociales */
+.iconos-redes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.red-social:hover {
+    background: #e87a24;
+    border-color: #e87a24;
+    transition: 0.3s;
+}
+
+/* Copyright al final del todo */
+#footer-copyright {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+    color: #666;
+
+}
+
+.red-social {
+    display: flex;         /* Convierte el enlace en un contenedor flexible */
+    align-items: center;    /* Centra verticalmente la imagen y el texto */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    gap: 10px;             /* Crea un espacio perfecto entre la imagen y el texto */
+    background: #1a1a1e;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;       /* agregamos de la antigua version un borde ligero, igual que las imagenes una pequeña transicion y un color que pega con la pagina */
+    border: 1px solid #333;
+}
+
+#tarjeta-login-borde {
+    padding: 40px;
+    border-radius: 15px;
+    border: 1px solid #333;
+    max-width: 400px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+}
+
+#login-footer {
+    margin-top: 25px;
+}
+
+#login-footer p {
+  color: #f4f4f4;
+}
+
+#login-footer a {
+    color: #888;
+    text-decoration: none;
+    font-size: 0.8rem;
+    transition: 0.3s;
+}
+
+#login-footer a:hover {
+    color: #e87a24;
+}
+
+#login-footer hr {
+    margin: 20px 0;
+}
+
+#login-main {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center;     /* Centra verticalmente */
+    min-height: 80vh;        /* Le da altura suficiente para separar header de footer */
+    padding: 40px 0;         /* Espacio de seguridad */
+}
+
+#contenedor-checkbox {      /* checkbox añadido para agregar mas sentido a la seccion de contacto */
+    display: flex;         /* checkbox y el texto en fila */
+    align-items: flex-start; /* Alinea al inicio por si el texto tiene varias líneas */
+    gap: 10px;             /* Deja un espacio elegante entre el cuadro y el texto */
+    margin: 20px 0;        /* Separa el bloque del textarea y del botón */
+    text-align: left;      /* Asegura que el texto no se centre */
+}
+
+#contenedor-checkbox input {
+    width: auto;           /* Importante: para que no herede el ancho 100% de otros inputs */
+    margin-top: 10px;       /* Ajuste para dejar recto el boton con el texto */
+    cursor: pointer;
+}
+
+#contenedor-legal {
+    display: flex;
+    justify-content: center;
+    padding: 50px 20px;
+    background-color: #f4f4f4; /* Fondo gris claro para que parezca papel */
+}
+
+#caja-legal {
+    max-width: 800px;
+    background: white;
+    padding: 60px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    line-height: 1.6;
+}
+
+#caja-legal h1 {
+    color: #e87a24;
+    text-align: center;
+    border-bottom: 2px solid #e87a24;
+    padding-bottom: 20px;
+}
+
+.articulo {
+    margin-top: 30px;
+}
+
+.articulo h2 {
+    font-size: 1.2rem;
+    color: #1a1a1e;
+    border-left: 4px solid #e87a24;
+    padding-left: 10px;
+}
+
+#fecha-actualizacion {
+    font-style: italic;
+    color: #888;
+    text-align: center;
+}
+
+#boton-volver {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 15px 30px;
+    background: #e87a24;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+#boton-volver:hover {
+    background: #104e7a;
+}
+#seccion-firma {
+    text-align: right; /* Las firmas suelen ir a la derecha */
+}
+
+#contenedor-vender {
+    display: flex;
+    justify-content: center;
+    padding: 60px 20px;
+    background: #ffffff;
+}
+
+#caja-vender {
+    background: #1a1a1e;
+    max-width: 600px;
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid #1d1515;
+    text-align: center;
+}
+
+#caja-vender h1 {
+    color: #e87a24;
+    margin-bottom: 10px;
+}
+
+#caja-vender p {
+    color: #ff8c32; 
+    margin-bottom: 20px;
+}
+
+#zona-subida {
+    border: 2px dashed #e87a24;
+    border-radius: 15px;
+    padding: 40px;
+    margin-bottom: 25px;
+    transition: 0.3s;
+    background: #25252b;
+}
+
+#zona-subida:hover {
+    background: #2d2d35;
+    border-style: solid;
+}
+
+#label-subida {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #888;
+}
+
+#label-subida i {
+    font-size: 3rem;
+    color: #e87a24;
+    margin-bottom: 15px;
+}
+
+.campo {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.campo label {
+    display: block;
+    color: #e87a24;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.campo input, .campo textarea {
+    padding: 12px;
+    background: #25252b;
+    border: 1px solid #444;
+    border-radius: 8px;
+    color: white;
+}
+
+#advertencia-gas {
+    background: rgba(232, 122, 36, 0.1);
+    border-left: 4px solid #e87a24;
+    padding: 15px;
+    margin-bottom: 25px;
+}
+
+#contenedor-escaparate {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+#cabecera-tienda {   /*cabecera utilizada para los textos grandes encima de la tienda y colecciones */
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#cabecera-tienda h3 {
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+#cabecera-tienda h1 {
+    color: #e87a24;
+    font-size: 2.5rem;
+}
+
+#grid-productos {
+    display: grid; /* Crea columnas automáticamente según el tamaño de la pantalla */
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.tarjeta-nft {                 /* tarjeta donde se representara el articulo sobre todo en la tienda */
+    background: #1a1a1e;
+    border: 1px solid #333;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.tarjeta-nft img {
+  width: 100%;
+  display: block;
+  max-width: 600px;
+}
+
+.tarjeta-nft:hover {
+    border-color: #e87a24;
+    box-shadow: 0 10px 30px rgba(232, 122, 36, 0.2);
+}
+
+.imagen-box {
+    position: relative;
+    height: 250px;
+    background: #25252b;
+}
+
+.imagen-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Para que la imagen no se deforme ponemos estos modificadores*/
+}
+
+.cuerpo-nft {     /* una pequeña separacion */
+    padding: 20px;
+}
+
+.cuerpo-nft h3 {
+    color: white;
+    margin: 0 0 5px 0;
+}
+
+.vendedor {
+    color: #888;
+    font-size: 0.8rem;
+    margin-bottom: 20px;
+}
+
+.vendedor span {
+    color: #e87a24;
+}
+
+.precio-tag {
+    background: #25252b;
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.precio-tag small {
+    color: #888;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.precio-tag p {
+    color: #e87a24;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.euro {
+    font-size: 0.8rem;
+    color: #666;
+    margin-left: 10px;
+}
+
+.btn-comprar {
+    width: 100%;
+    padding: 12px;
+    background: #e87a24;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.btn-comprar:hover {
+    background: #ff8c32;
+    letter-spacing: 1px;
+}
+
+#monoanuncio-derecha2, #monoanuncio-derecha3 {
+    position: relative;
+    left: 100px;
+    margin-top: 80px;
+    width: 400px;
+    border-radius: 4px;        /* es un borde redondeado para que quede mas bonito, debo aplicarlo al resto de imagenes antes de que se me olvide */
+    object-fit: cover;
+}
+
+.margen20 {                 /* un pequeño y basico margen de 20 para el css */
+    margin-top: 20px;
+}
+
+/* Contenedor principal que define el fondo y los colores de la letra */
+#tienda {
+  background-color: #ffffff;
+  color: #ff7b00;
+  padding: 60px 20px;
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+}
+
+#nft-wrapper {
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+
+#token-id {
+  padding: 15px;
+  font-size: 0.8rem;
+  color: #f8f8f8;
+  text-align: center;
+}
+
+/* Caja de Puja */
+#oferta {
+  background: #1a1c23;
+  border-radius: 16px;
+  padding: 25px;
+  margin: 20px 0;
+}
+
+#precio {
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin: 15px 0;
+}
+
+/* Tabla de historial detallada */
+#historial {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  font-size: 0.9rem;
+  background: fixed;
+  background-color: #0a2e48;
+  border-radius: 10px;
+}
+
+#historial th {                   /*estilos de los contenidos de la tabla */
+  text-align: left;
+  color: #ffffff;
+  border-bottom: 1px solid #ffffff;
+  padding: 10px;
+  text-align: center;
+}
+
+#historial td {
+  padding: 12px 10px;
+  border-bottom: 1px solid #fdfdfd;
+  text-align: center;
+}
+
+#textoflotante {
+    float: left;    /* El elemento se mueve a la izquierda */
+    margin-left: 10px; /* Dejamos espacio para que el texto no se pegue */
+    margin-right: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* El contenedor padre que tiene el fondo de los billetes */
+#banner-nfts {
+    display: flex;
+    align-items: center;       /* Alinea verticalmente todo al centro */
+    justify-content: center;   /* Centra el bloque general en la pantalla */
+    width: 100%;
+    padding: 40px 20px;
+    background: url(img/economia.gif) repeat;
+    background-color: #1a2f24; /* Respaldo por si no carga la imagen */
+    gap: 20px;                 /* Espacio controlado entre los monos y la tarjeta */
+}
+
+/* Los bloques laterales donde están los monos */
+.banner-lateral {
+    flex: 1;                   /* Le dice a los lados que crezcan equitativamente */
+    display: flex;
+    justify-content: center;   /* Centra la imagen dentro de su espacio */
+    max-width: 320px;          /* Evita que los monos se hagan gigantes en pantallas enormes */
+}
+
+/* Estilo para las imágenes de los monos */
+#mono-img-derecha {
+    width: 400px;
+    max-width: 400px;          /* Tamaño ideal del mono en el diseño */
+    border-radius: 4px;
+    object-fit: cover;
+    margin-left: 360px;
+}
+
+#mono-img-izquierda {
+    width: 400px;
+    max-width: 400px;          /* Tamaño ideal del mono en el diseño */
+    border-radius: 4px;        /* es un borde redondeado para que quede mas bonito, debo aplicarlo al resto de imagenes antes de que se me olvide */
+    object-fit: cover;
+    margin-right: 360px;
+}
+
+/* El bloque central que contiene la tarjeta verde oscura */
+#banner-central {
+    flex: 1.5;                 /* Le da un poco más de prioridad de espacio al centro */
+    max-width: 550px;          /* Limita el ancho para que se vea idéntico a tu diseño */
+    background-color: #12281c; 
+    border-radius: 12px;
+    padding: 6px;              /* Pequeño espacio antes del borde punteado */
+}
+
+/* El recuadro punteado interno */
+#borde-tarjeta {
+    border: 2px dashed #ff9900;
+    border-radius: 10px;
+    padding: 30px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* --- Elementos internos de la tarjeta (Tus textos y botones) --- */
+#banner-central h1 {
+    color: #ff9900;
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+}
+
+#banner-central h2 {
+    color: #ccff00;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+#descripcion {
+    color: #ffffff;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+#beneficios-container {
+    background-color: #18462b;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+.beneficioso {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    color: #ffffff;
+    font-size: 0.85rem;
+}
+
+#bannerinicio {
+    width: 100%;       /* Obliga a la imagen a ocupar el 100% del ancho de su contenedor */
+  height: auto;      /* Mantiene la proporción original para que no se deforme */
+  display: block;    /* Elimina un pequeño espacio en blanco que los navegadores dejan abajo */
+}

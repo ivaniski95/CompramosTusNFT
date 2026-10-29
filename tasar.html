@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="Tasacion" content="Tasacion">
+    <title>Tasar</title>
+    <link rel="icon" type="image/gif" href="img/nfthero.png">
+    <link rel="stylesheet" type="text/css" href="trabajo7.css">
+  </head>
+
+  <body>
+    
+    <!-- Esta es la franja azul oscuro completa -->
+     <header id="header-principal">
+        
+        <!-- Contenedor para centrar el contenido (opcional, pero recomendado) -->
+        <div id="contenedor-flex">
+
+            <!-- 1. BLOQUE LOGO (Izquierda) -->
+            <div>
+                <a href="inicio.html"><img src="img/logo2.png"></a>
+            </div>
+
+            <!-- 2. BLOQUE MENÚ (Centro) -->
+            <nav id="menu-navegacion">
+                <ul>
+                    <li><a href="inicio.html">Inicio</a></li>
+                    <li><a href="vender.html">Vender NFT</a></li>
+                    <li id="pagina-actual"><a href="tasar.html">Tasar NFT</a></li>
+                    <li><a href="escaparate.html">Comprar NFT</a></li>
+                    <li><a href="colecciones.html">Colecciones</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="iniciarsesion.html">👤 Iniciar Sesion</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+    
+
+<main id="contenedor-vender">
+
+        <div id="caja-vender">     <!-- interfaz de formulario de enviar NFT-->
+            <h1>Sube tu "Obra de Arte"</h1>
+            <p >Convierte cualquier basura de tu galería en un activo digital millonario.</p>
+
+            <form action="#" class="form-vender">
+                <div id="zona-subida">
+                    <label for="archivo-nft" id="label-subida">
+                        <i class="fa-solid fa-cloud-arrow-up"></i>
+                        <span>Arrastra tu imagen aquí o haz clic</span>
+                        <input type="file" id="archivo-nft" accept="image/*" required>
+                    </label>
+                </div>
+
+                <div class="campo">
+                    <label>Nombre del NFT</label>
+                    <input type="text" placeholder="Ej: Mono aburrido con gorro de lana" required>
+                </div>
+
+                <div class="campo">
+                    <label>Precio de salida (ETH)</label>
+                    <input type="number" step="0.01" placeholder="Ej: 99.5" required>
+                </div>
+
+                <div class="campo">
+                    <label>Descripción del humo</label>
+                    <textarea placeholder="Explica por qué este JPEG vale más que la casa de tus padres..."></textarea>
+                </div>
+
+                <div id="advertencia-gas">
+                    <p>⚠️ Al hacer clic, aceptas pagar una <strong>"Pequeña Tarifa"</strong> de 400€<br> (no reembolsables) para que miremos tu foto.</p>
+                </div>
+                            
+                <button type="button" class="btn-comprar" >
+                    MINTEAR NFT (Y REZAR)
+                </button>
+            </form>
+        </div>
+
+    </main>
+
+
+
+     <footer id="footer-estafa">
+    <div id="contenedor-footer">
+        <!-- Columna 1: Un poco de branding -->
+        <div id="footer-info">
+            <h4>CompramosTusNFTs.es</h4>
+            <p>Líderes en el mercado secundario de activos digitales de dudoso valor desde 2022.</p>
+        </div>
+
+        <!-- Columna 2: Redes Sociales -->
+        <div id="footer-redes">
+            <h4>Síguenos en nuestras redes "sociales"</h4>
+            <div id="iconos-redes">
+                <a href="https://x.com/" class="red-social"><img width="30" src="img/x.png" alt="twitter2">X (Twitter)</a>
+                <a href="https://www.instagram.com/" class="red-social"><img width="20" src="img/instagram.png" alt="instagram">Instagram</a>
+                <a href="https://www.tiktok.com/explore" class="red-social"><img width="20" src="img/tiktok.png" alt="tiktok">TikTok (Si)</a>
+                <a href="https://web.telegram.org" class="red-social"> <img width="20" src="img/telegram.png" alt="telegram"> Telegram</a>
+            </div>
+        </div>
+
+        <!-- Columna 3: Enlaces de relleno -->
+        <div id="footer-links">
+            <h4>Legales</h4>
+            <ul>
+                <li><a href="politica.html">Política de Humo</a></li>
+                <li><a href="politica.html">Términos de "No Devolución"</a></li>
+                <li><a href="politica.html">Cookies de Chocolate</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="footer-copyright">
+        <p>&copy; 2026 CompramosTusNFTs - Todos los derechos reservados (o lo que quede de ellos).</p>
+    </div>
+</footer>
+
+  </body>
+  
+  </html>
